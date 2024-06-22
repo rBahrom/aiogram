@@ -1,11 +1,15 @@
 # app.py module
 import logging
+import os
+
 from database import Database
 from aiogram import Bot, Dispatcher, executor, types
 from default_button import *
 from inline_button import keyboard
+from dotenv import load_dotenv
+load_dotenv()
 
-API_TOKEN = "5843003643:AAGHQTQJZ4A_WgV0zPdAMXrgnwA5net7CVU"
+API_TOKEN = os.getenv("API_TOKEN")
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
